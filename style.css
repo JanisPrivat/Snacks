@@ -34,7 +34,7 @@ body {
       margin-top: 20px;
       padding: 10px 15px;
       font-size: 18px;
-      background: #e1adff;
+      background: #fdc461;
       border: none;
       border-radius: 8px;
       cursor: pointer;
@@ -53,10 +53,76 @@ body {
     width: 100vw;
     display: flex;               
     justify-content: center;     
-    align-items: center;   
+    align-items: center;
+    flex-direction: column;  
+    position: relative; 
+}
+
+.hero-section .lottie{
+  position: absolute;
+  z-index: -1;
+  width: 450px; 
+  height: 450px;
+}
+
+.hero-section .lottie1{
+  position: absolute;
+  z-index: -1;
+  margin-top: 400px;
+  margin-right: 150px;
+  width: 150px; 
+  height: 150px;
+}
+
+.hero-section .lottie2{
+  position: absolute;
+  z-index: -1;
+  margin-top: -450px;
+  margin-right: -200px;
+  width: 100px; 
+  height: 100px;
+}
+
+.hero-section .lottie3{
+  position: absolute;
+  z-index: -1;
+  margin-top: -350px;
+  margin-right: 200px;
+  width: 150px; 
+  height: 150px;
+}
+
+.hero-section .lottie4{
+  position: absolute;
+  z-index: -1;
+  margin-top: 550px;
+  margin-right: -200px;
+  width: 200px; 
+  height: 200px;
+}
+
+.auswahl #colaAnimation{
+  position: absolute;
+  z-index: -1;
+  margin-left: 200px;
+  margin-top: -50px;
+  width: 150px; 
+  height: 150px;
+  display: none;   /*Um zu aktivieren auf Block stellen*/
+}
+
+.footer .lottiefooter{
+  position: absolute;
+  z-index: -1;
+  margin-top: 50px;
+  margin-left: 100px;
+  width: 200px; 
+  height: 200px;
 }
 
 .choice{
+    margin-top: 250px;
+    margin-bottom: 250px;
     padding: 20px;
     display: flex;
     justify-content: center;
@@ -64,6 +130,8 @@ body {
 
 .auswahl{
     padding: 20px;
+    position: relative;
+    margin-left: 20px;
 }
 
 .auswahl h2{
@@ -73,6 +141,8 @@ body {
 .confirm-button{
     display: flex;
     justify-content: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
 }
 
 .confirm-button button {
