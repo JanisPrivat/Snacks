@@ -89,11 +89,36 @@
             <label><input type="checkbox" value="Heiße Schokolade"> Heisse Schokolade</label>
     </div>
 
-    <div class="confirm-button">
-        <button onclick="showSelection()">Click me pweaze to confirm hihi🥹❤️</button>
-    </div>
+                <script>
+                    function showSelection() {
+                    const checked = document.querySelectorAll('input[type="checkbox"]:checked');
+                    const snacks = Array.from(checked).map(item => item.value);
 
-    <div id="result"></div>
+                    const resultBox = document.getElementById("result");
+                    if (snacks.length > 0) {
+                    resultBox.innerHTML = "<strong>Your choiziez🥹❤️:</strong><br>" + snacks.join(", ");
+                    } else {
+                    resultBox.innerHTML = "Choose snackiez first pweaze🥹👉🏻👈🏻❤️";
+                    }
+                    }
+
+                    // alle Checkboxen überwachen → bei Änderung sofort updaten
+                    document.querySelectorAll('input[type="checkbox"]').forEach(cb => {
+                    cb.addEventListener("change", showSelection);
+                    });
+
+                    // initial einmal aufrufen, damit #result von Anfang an korrekt ist
+                    showSelection();
+                </script>
+
+
+    <div id="result">
+        
+    </div>
+    
+    <div class="confirm-button">
+        <button id="sendMail">Confirm order🥹❤️</button>
+    </div>
 
     <div class="end">
         Send a screenshot of the list to bubai for snackie receiving🥹👉🏻👈🏻❤️
